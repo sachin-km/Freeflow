@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { 
   Zap, 
   GitBranch, 
@@ -44,10 +44,15 @@ const categories = [
   }
 ]
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
+const fadeInUp: Variants = {
+  initial: {
+    opacity: 0,
+    y: 20
+  },
+  animate: {
+    opacity: 1,
+    y: 0
+  }
 }
 
 const stagger = {
@@ -74,8 +79,11 @@ export default function DashboardPage() {
       className="space-y-8"
     >
       {/* Hero Section */}
-      <motion.div 
+      <motion.div
         variants={fadeInUp}
+        initial="initial"
+        animate="animate"
+        transition={{ duration: 0.5 }}
         className="relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-xl border border-white/20 p-8"
       >
         <div className="max-w-2xl">

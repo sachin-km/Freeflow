@@ -2,12 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  output: 'export',
   images: {
     unoptimized: true,
   },
-  // Required for Netlify
-  trailingSlash: true,
+  // Remove trailingSlash if you don't need it specifically
 }
 
 module.exports = nextConfig 

@@ -37,8 +37,8 @@ export default function DashboardLayout({
 
   const handleNewProject = () => {
     // Generate a unique project ID - in production this would come from your backend
-    const projectId = Math.random().toString(36).substr(2, 9)
-    router.push(`/workspace/${projectId}`)
+    // const projectId = Math.random().toString(36).substr(2, 9)
+    router.push(`/workspace/new`)
   }
 
   return (

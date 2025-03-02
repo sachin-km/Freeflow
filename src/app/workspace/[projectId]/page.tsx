@@ -7,7 +7,13 @@ import { SiOpenai } from 'react-icons/si'
 import { WorkspaceContext } from '@/contexts/WorkspaceContext'
 import { HiChevronDown } from 'react-icons/hi'
 
-export default function Workspace() {
+interface Props {
+  params: {
+    projectId: string
+  }
+}
+
+export default function Workspace({ params }: Props) {
   const { mode } = useContext(WorkspaceContext)
   const [mermaidCode, setMermaidCode] = useState('')
   const [scale, setScale] = useState(1)
